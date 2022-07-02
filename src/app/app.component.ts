@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular12';
+  
+  title = 'angular12 NgModel';
+
+  data:any;
 }
