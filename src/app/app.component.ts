@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   
   title = 'angular12 NgModel';
-  loginUser(item:any)
+
+  loginForm = new FormGroup(
+    {
+      user: new FormControl(''),
+      password: new FormControl('')
+    }
+  )
+  loginUser()
   {
-    console.warn(item);
+    console.warn(this.loginForm.value);
   }
 }
