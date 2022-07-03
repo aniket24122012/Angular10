@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup , Validators} from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+
+import { APIService } from './services/api.service';
+
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,19 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private route : ActivatedRoute){}
-userId : any;
+
+  users:any;
+   constructor(private userdata : APIService)
+   {
+    userdata.getUser().subscribe(
+      (data)=>{
+        this.users=data;
+      }
+    );
+
+   }
   ngOnInit() : void {
-    console.warn("user id :",this.route.snapshot.paramMap.get('id'));
+   
   }
 
 }

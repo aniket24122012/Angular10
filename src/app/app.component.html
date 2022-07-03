@@ -1,20 +1,20 @@
-<h1>HomeShopForMe</h1>
-
-<a routerLink="">Home</a>
-<br>
-<br>
-<a routerLink="about">About</a>
-<br>
-<br>
-<a routerLink="user">User</a>
-
-<br>
-<br>
-<a routerLink="user/1">Aniket</a>
-<br>
-<a routerLink="user/2">Golu</a>
-<br>
-<a routerLink="user/3">Sahil</a>
-<router-outlet></router-outlet> 
-
-{{userId}}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">UserId</th>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of users">
+        <th scope="row" >{{data.userId}}</th>
+        <td>{{data.id}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.body}}</td>
+        
+      </tr>
+   
+    </tbody>
+  </table>
