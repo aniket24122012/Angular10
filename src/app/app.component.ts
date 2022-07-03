@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   
   title = 'angular12 NgModel';
-
-  data:any;
+  loginUser(item:any)
+  {
+    console.warn(item);
+  }
 }
