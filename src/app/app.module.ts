@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
 import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
+import { AboutCompanyComponent } from './about-company/about-company.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
     HomeComponent,
     AboutComponent,
     UserComponent,
-    NoPageFoundComponent
+    NoPageFoundComponent,
+    AboutCompanyComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,
