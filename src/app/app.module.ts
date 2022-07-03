@@ -9,6 +9,7 @@ import { RedElDirective } from './red-el.directive';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
+import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UserComponent } from './user/user.component';
     RedElDirective,
     HomeComponent,
     AboutComponent,
-    UserComponent
+    UserComponent,
+    NoPageFoundComponent
   ],
   imports: [
     BrowserModule,

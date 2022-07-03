@@ -12,7 +12,6 @@ export class AppComponent {
 userId : any;
   ngOnInit() : void {
     console.warn("user id :",this.route.snapshot.paramMap.get('id'));
-    this.userId=this.route.snapshot.paramMap.get('id');
   }
 
 }
