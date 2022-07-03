@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup , Validators} from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,24 +8,11 @@ import {FormControl, FormGroup , Validators} from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  title = 'angular12 NgModel';
-
-  loginForm = new FormGroup(
-    {
-      user: new FormControl('',[Validators.required, Validators.email]),
-      password: new FormControl('',[Validators.required, Validators.minLength(5)])
-    }
-  )
-  loginUser()
-  {
-    console.warn(this.loginForm.value);
+  constructor(private route : ActivatedRoute){}
+userId : any;
+  ngOnInit() : void {
+    console.warn("user id :",this.route.snapshot.paramMap.get('id'));
+    this.userId=this.route.snapshot.paramMap.get('id');
   }
-  get user(){
-         return this.loginForm.get('user');    
-  }
-  get password(){
-    return this.loginForm.get('password');    
-}
 
 }
