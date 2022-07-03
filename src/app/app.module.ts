@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
 import { RedElDirective } from './red-el.directive';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RedElDirective
+    RedElDirective,
+    HomeComponent,
+    AboutComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
